@@ -19,6 +19,10 @@ def is_not_empty(item):
 def if_book_id_exist(book,book_id):
     if book["id"] == book_id:
         return True
+    return False 
+def if_name_exist(book,name):
+    if book["name"] == name:
+        return True
     return False    
 def if_author_exist(book,book_id):
     if book["id"] == book_id:

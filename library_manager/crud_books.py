@@ -1,5 +1,5 @@
 from db.list_books import BOOKS
-from library_manager.validates import is_book_already_borrow,if_book_id_exist,if_author_exist
+from library_manager.validates import is_book_already_borrow,if_book_id_exist,if_author_exist,if_name_exist
 
 def search_book(books, name):
     new_books = []
@@ -13,7 +13,7 @@ def get_next_book_id(books):
 
 def add_book(books, name, author, year):
     for book in books:
-        if if_book_id_exist(book,name) or if_author_exist(book,author):
+        if if_name_exist(book,name) and if_author_exist(book,author):
             return "it's already exists"
     book_id = get_next_book_id(books)
     book = {"id": book_id,"name": name,"author": author,"year": year,"available": True}
