@@ -15,7 +15,7 @@ def main():
         elif choice_option ==2:
             print(search_book(BOOKS,get_name("enter name")))
         elif choice_option ==3:
-            add_book(BOOKS,get_name("enter name"),get_name("enter author"),get_num("enter year"))
+            print(add_book(BOOKS,get_name("enter name"),get_name("enter author"),get_num("enter year")))
         elif choice_option ==4:
             book_id = get_num("enter book id")
             print(borrow_book(BOOKS,book_id))
