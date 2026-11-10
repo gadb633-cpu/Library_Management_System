@@ -13,11 +13,7 @@ def main():
         if choice_option ==1:
             display_books(BOOKS)
         elif choice_option ==2:
-            result = search_book(BOOKS,get_name("enter name"))
-            if result ==[]:
-                print("not found")
-                continue
-            print(result)
+            print(search_book(BOOKS,get_name("enter name")))
         elif choice_option ==3:
             print(add_book(BOOKS,get_name("enter name"),get_name("enter author"),get_num("enter year")))
         elif choice_option ==4:

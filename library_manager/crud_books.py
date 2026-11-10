@@ -7,6 +7,8 @@ def search_book(books, name):
         if name.lower() in book["name"].lower():
             new_books.append(book)
             continue
+    if new_books ==[]:
+        return "not found"    
     return new_books    
 def get_next_book_id(books):
     return len(books)+1
