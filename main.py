@@ -1,14 +1,14 @@
 from db.list_books import BOOKS
 from library_manager.result import shaw_menu,display_books
 from library_manager.inputs import get_num,get_name
-from library_manager.validates import is_positive_num,is_in_range_0_to_8,is_book_already_borrow,if_book_id_exist,is_not_empty
+from library_manager.validates import is_positive_num,is_in_range_1_to_8,is_book_already_borrow,if_book_id_exist,is_not_empty
 from library_manager.crud_books import add_book,borrow_book,search_book,get_next_book_id,return_book,get_available_books,get_books_by_author
 def main():
     status_loop = True
     while status_loop:
-        menu = shaw_menu()
-        choice_option = get_num("Choose an option(0-8)")
-        if is_in_range_0_to_8(choice_option) == False:
+        print(shaw_menu())
+        choice_option = get_num("Choose an option(1-8)")
+        if is_in_range_1_to_8(choice_option) == False:
             continue
         if choice_option ==1:
             display_books(BOOKS)
@@ -27,10 +27,7 @@ def main():
         elif choice_option ==7:
             print(get_books_by_author(BOOKS,get_name("enter author")))
         elif choice_option ==8:
-            pass    
-        elif choice_option ==0:
-            status_loop = False
-
+            status_loop = False   
 
 if __name__ =="__main__":
     main()    

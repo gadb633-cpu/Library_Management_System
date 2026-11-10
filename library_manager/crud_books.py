@@ -4,7 +4,7 @@ from library_manager.validates import is_book_already_borrow,if_book_id_exist,if
 def search_book(books, name):
     for book in books:
         if name in book["name"]:
-            return book["name"]
+            return book
     return None
 def get_next_book_id(books):
     return len(books)+1
