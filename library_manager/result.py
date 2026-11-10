@@ -16,3 +16,6 @@ def shaw_menu():
     
             Choose an option:
         '''
+def display_books(books):
+    for book in books:
+        print(book)    
