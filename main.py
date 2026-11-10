@@ -2,7 +2,7 @@ from db.list_books import BOOKS
 from library_manager.result import shaw_menu,display_books
 from library_manager.inputs import get_num,get_name
 from library_manager.validates import is_positive_num,is_in_range_0_to_8,is_book_already_borrow,if_book_id_exist,is_not_empty
-from library_manager.crud_books import add_book,borrow_book,search_book,get_next_book_id,return_book
+from library_manager.crud_books import add_book,borrow_book,search_book,get_next_book_id,return_book,get_available_books
 def main():
     status_loop = True
     while status_loop:
@@ -23,7 +23,7 @@ def main():
             book_id = get_num("enter book id")
             print(return_book(BOOKS,book_id))
         elif choice_option ==6:
-            pass
+            print(get_available_books(BOOKS))
         elif choice_option ==7:
             pass
         elif choice_option ==8:
