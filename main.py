@@ -1,5 +1,5 @@
 from db.list_books import BOOKS
-from library_manager.result import shaw_menu
+from library_manager.result import shaw_menu,display_books
 from library_manager.inputs import get_num
 from library_manager.validates import is_positive_num,is_in_range_0_to_8
 from library_manager.crud_books import add_book,borrow_book,search_book,get_next_book_id
@@ -11,7 +11,7 @@ def main():
         if is_in_range_0_to_8(choice_option) == False:
             continue
         if choice_option ==1:
-            pass
+            display_books(BOOKS)
         elif choice_option ==2:
             pass
         elif choice_option ==3:
