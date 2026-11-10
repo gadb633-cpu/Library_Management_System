@@ -33,3 +33,10 @@ def return_book(books, book_id):
                 book["available"] = True
                 return "ok"
     return "It already exists!"
+
+def get_available_books(books):
+    new_books = []
+    for book in books:
+        if book["available"] == True:
+            new_books.append(book)
+    return new_books        
