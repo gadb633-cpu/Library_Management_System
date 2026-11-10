@@ -1,5 +1,5 @@
 from db.list_books import BOOKS
-from library_manager.validates import is_book_already_borrow
+from library_manager.validates import is_book_already_borrow,if_book_id_exist
 
 def search_book(books, name):
     for book in books:
@@ -17,7 +17,8 @@ def add_book(books, name, author, year):
 
 def borrow_book(books, book_id):
     for book in books:
-        if is_book_already_borrow(book,book_id):
+        if is_book_already_borrow(book,book_id) and if_book_id_exist(book,book_id):
             if book["id"] == book_id:
                 book["available"] = False
-                
+                return "ok"
+    return "not found"            
