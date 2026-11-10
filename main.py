@@ -1,11 +1,34 @@
-from db.list_books import get_list_of_books
+from db.list_books import BOOKS
 from library_manager.result import shaw_menu
+from library_manager.inputs import get_num
+from library_manager.validates import is_positive_num,is_in_range_0_to_8
+from library_manager.crud_books import add_book,borrow_book,search_book,get_next_book_id
 def main():
     status_loop = True
-    books = get_list_of_books()
     while status_loop:
         menu = shaw_menu()
-        
+        choice_option = get_num("Choose an option(0-8)")
+        if is_in_range_0_to_8(choice_option) == False:
+            continue
+        if choice_option ==1:
+            pass
+        elif choice_option ==2:
+            pass
+        elif choice_option ==3:
+            pass
+        elif choice_option ==4:
+            pass
+        elif choice_option ==5:
+            pass
+        elif choice_option ==6:
+            pass
+        elif choice_option ==7:
+            pass
+        elif choice_option ==8:
+            pass    
+        elif choice_option ==0:
+            status_loop = False
+
 
 if __name__ =="__main__":
     main()    
