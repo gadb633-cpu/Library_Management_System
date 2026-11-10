@@ -11,3 +11,7 @@ def is_in_range_0_to_8(num):
 def is_book_already_borrow(book, book_id):
         if book["id"] == book_id:
             return book["available"]
+def is_not_empty(item):
+    if item == "":
+         return False
+    return True        
