@@ -24,8 +24,8 @@ def if_name_exist(book,name):
     if book["name"] == name:
         return True
     return False    
-def if_author_exist(book,book_id):
-    if book["id"] == book_id:
+def if_author_exist(book,author):
+    if book["author"] == author:
         return True
     return False  
      

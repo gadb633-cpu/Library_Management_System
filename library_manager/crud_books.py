@@ -16,8 +16,8 @@ def add_book(books, name, author, year):
         if if_name_exist(book,name) and if_author_exist(book,author):
             return "it's already exists"
     book_id = get_next_book_id(books)
-    book = {"id": book_id,"name": name,"author": author,"year": year,"available": True}
-    books.append(book)
+    new_book = {"id": book_id,"name": name,"author": author,"year": year,"available": True}
+    books.append(new_book)
     return True
 
 def borrow_book(books, book_id):
