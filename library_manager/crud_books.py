@@ -25,3 +25,11 @@ def borrow_book(books, book_id):
                 book["available"] = False
                 return "ok"
     return "not found"            
+
+def return_book(books, book_id):
+    for book in books:
+        if is_book_already_borrow(book,book_id) == False:
+            if book["id"] == book_id:
+                book["available"] = True
+                return "ok"
+    return "It already exists!"
