@@ -2,10 +2,13 @@ from db.list_books import BOOKS
 from library_manager.validates import is_book_already_borrow,if_book_id_exist,if_author_exist
 
 def search_book(books, name):
+    new_books = []
     for book in books:
-        if name in book["name"]:
-            return book
-    return None
+        if name.lower() in book["name"].lower():
+            new_books.append(book)
+            continue
+        return None 
+    return new_books        
 def get_next_book_id(books):
     return len(books)+1
 
