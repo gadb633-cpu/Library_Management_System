@@ -39,4 +39,10 @@ def get_available_books(books):
     for book in books:
         if book["available"] == True:
             new_books.append(book)
-    return new_books        
+    return new_books 
+
+def get_books_by_author(books, author):
+    for book in books:
+        if book["author"] == author:
+            return book
+    return "not found"          
