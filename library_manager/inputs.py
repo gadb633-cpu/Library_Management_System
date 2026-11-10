@@ -3,7 +3,7 @@ def get_num(msg):
     while True:
         try:
             num = int(input(f"{msg}:").strip())
-            if is_positive_num:
+            if is_positive_num(num):
                 if is_not_empty(num):
                     return num
         except ValueError:
