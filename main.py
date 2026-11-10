@@ -15,7 +15,7 @@ def main():
         elif choice_option ==2:
             print(search_book(BOOKS,get_name("enter name")))
         elif choice_option ==3:
-            pass
+            add_book(BOOKS,get_name("enter name"),get_name("enter author"),get_num("enter year"))
         elif choice_option ==4:
             pass
         elif choice_option ==5:
